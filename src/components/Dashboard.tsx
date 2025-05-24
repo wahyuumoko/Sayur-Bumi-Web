@@ -283,7 +283,7 @@ export default function Dashboard() {
                     <label className="block text-sm font-medium text-gray-800 mb-2" htmlFor="product-select">Pilih Produk</label>
                     <select
                       id="product-select"
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:border-transparent transition-all"
+                      className="w-full p-3 text-gray-800 border border-gray-300 rounded-lg focus:border-transparent transition-all"
                       value={selectedProduct}
                       onChange={(e) => setSelectedProduct(e.target.value)}
                     >
@@ -297,7 +297,7 @@ export default function Dashboard() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="quantity-input">Jumlah</label>
+                    <label className="block text-sm font-medium text-black mb-2" htmlFor="quantity-input">Jumlah</label>
                     <div className="flex items-center gap-2">
                       <button
                         onClick={() => setQty(Math.max(1, qty - 1))}
@@ -616,5 +616,3 @@ export default function Dashboard() {
     </div>
   );
 }
-
-
