@@ -193,14 +193,16 @@ export default function Dashboard() {
 );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50 p-6">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50 p-6 mb-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-8">
-          <h1 className="text-5xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent mb-2">
+        <div className="text-center mb-8 relative">
+          <h1 className="text-5xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent mb-4">
             🥬Toko Sayur Bumi
           </h1>
-          <p className="text-gray-600">Sistem Point of Sale Modern untuk Toko Sayur</p>
+          <p className="text-gray-600"> {/* Increased margin-bottom here */}
+        Sistem Point of Sale Modern untuk Toko Sayur
+      </p>
         </div>
 
         {/* Tab Navigation */}
