@@ -283,10 +283,10 @@ export default function Dashboard() {
                 
                 <div className="space-y-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="product-select">Pilih Produk</label>
+                    <label className="block text-sm font-medium text-gray-800 mb-2" htmlFor="product-select">Pilih Produk</label>
                     <select
                       id="product-select"
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+                      className="w-full p-3 border border-gray-300 rounded-lg focus:border-transparent transition-all"
                       value={selectedProduct}
                       onChange={(e) => setSelectedProduct(e.target.value)}
                     >
@@ -433,11 +433,11 @@ export default function Dashboard() {
                       placeholder="Cari produk..."
                       value={search}
                       onChange={(e) => setSearch(e.target.value)}
-                      className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent w-64"
+                      className="pl-10 pr-4 py-2 border border-gray-300 text-black rounded-lg "
                       aria-label="Cari produk"
                     />
                     <div className="absolute left-3 top-1/2 transform -translate-y-1/2">
-                      <Eye className="w-4 h-4 text-gray-400" />
+                      <Eye className="w-4 h-4 text-black" />
                     </div>
                   </div>
                 </div>
