@@ -297,11 +297,11 @@ export default function Dashboard() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-black mb-2" htmlFor="quantity-input">Jumlah</label>
+                    <label className="block text-sm font-medium text-black mb-2 flex justify-center" htmlFor="quantity-input">Jumlah</label>
                     <div className="flex items-center gap-2">
                       <button
                         onClick={() => setQty(Math.max(1, qty - 1))}
-                        className="p-2 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
+                        className="p-2 bg-black rounded-lg hover:bg-green-500 transition-colors"
                         aria-label="Kurangi jumlah"
                         type="button"
                       >
@@ -312,13 +312,13 @@ export default function Dashboard() {
                         type="number"
                         value={qty}
                         onChange={(e) => setQty(Math.max(1, parseInt(e.target.value) || 1))}
-                        className="flex-1 p-3 border border-gray-300 rounded-lg text-center focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                        className="flex-1 p-3 border text-black border-gray-300 rounded-lg text-center"
                         min={1}
                         aria-label="Jumlah produk"
                       />
                       <button
                         onClick={() => setQty(qty + 1)}
-                        className="p-2 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
+                        className="p-2 bg-black rounded-lg hover:bg-green-500 transition-colors"
                         aria-label="Tambah jumlah"
                         type="button"
                       >
@@ -374,7 +374,7 @@ export default function Dashboard() {
                           >
                             <Minus className="w-3 h-3" />
                           </button>
-                          <span className="w-8 text-center text-sm font-medium">{item.quantity}</span>
+                          <span className="w-8 text-center text-black text-sm font-medium">{item.quantity}</span>
                           <button
                             onClick={() => updateCartQuantity(item.id, item.quantity + 1)}
                             className="p-1 bg-white rounded hover:bg-gray-100 transition-colors"
@@ -400,7 +400,7 @@ export default function Dashboard() {
                 {cart.length > 0 && (
                   <div className="mt-6 pt-4 border-t border-gray-200">
                     <div className="flex justify-between items-center mb-4">
-                      <span className="text-lg font-semibold text-gray-800">Total:</span>
+                      <span className="text-lg font-semibold text-black">Total:</span>
                       <span className="text-xl font-bold text-green-600">
                         Rp {cart.reduce((sum, item) => sum + (item.price * item.quantity), 0).toLocaleString()}
                       </span>
