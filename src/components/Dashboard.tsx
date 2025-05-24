@@ -175,25 +175,22 @@ export default function Dashboard() {
   );
 
   const StatCard = ({ title, value, icon: Icon, color, trend }: StatCardProps) => (
-    <div className={`relative overflow-hidden rounded-2xl p-6 shadow-xl transform hover:scale-105 transition-all duration-300 ${color}`}>
-      <div className="absolute top-0 right-0 w-20 h-20 transform translate-x-6 -translate-y-6">
-        <div className="w-full h-full rounded-full bg-white bg-opacity-20"></div>
+  <div className={`relative overflow-hidden rounded-2xl p-6 shadow-xl transform hover:scale-105 transition-all duration-300 ${color}`}>
+    <div className="relative z-10">
+      <div className="flex items-center justify-between mb-2">
+        <Icon className="w-8 h-8 text-white opacity-80" />
+        {trend && (
+          <div className="flex items-center text-white text-sm">
+            <TrendingUp className="w-4 h-4 mr-1" />
+            +{trend}%
+          </div>
+        )}
       </div>
-      <div className="relative z-10">
-        <div className="flex items-center justify-between mb-2">
-          <Icon className="w-8 h-8 text-white opacity-80" />
-          {trend && (
-            <div className="flex items-center text-white text-sm">
-              <TrendingUp className="w-4 h-4 mr-1" />
-              +{trend}%
-            </div>
-          )}
-        </div>
-        <h3 className="text-white text-sm font-medium opacity-90">{title}</h3>
-        <p className="text-white text-3xl font-bold">{value}</p>
-      </div>
+      <h3 className="text-white text-sm font-medium opacity-90">{title}</h3>
+      <p className="text-white text-3xl font-bold">{value}</p>
     </div>
-  );
+  </div>
+);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50 p-6">
