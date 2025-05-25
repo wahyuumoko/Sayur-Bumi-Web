@@ -525,9 +525,7 @@ export default function Dashboard() {
                       .map((product, index) => (
                         <div key={product.id} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
                           <div className="flex items-center gap-4">
-                            <div className={`w-8 h-8 rounded-full flex items-center justify-center text-white font-bold ${
-                              index === 0 ? 'bg-yellow-500' : index === 1 ? 'bg-gray-400' : index === 2 ? 'bg-orange-500' : 'bg-gray-300'
-                            }`}>
+                            <div className="w-8 h-8 rounded-full flex items-center justify-center text-white font-bold bg-green-500">
                               {index + 1}
                             </div>
                             <div>
